@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8" />
+    <title>贪吃蛇</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+
+  <body>
+    <div id="main">
+      <div id="stage">
+        <div id="snake">
+          <div class="joint"></div>
+        </div>
+        <div id="food">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <div id="score-panel">
+        <div>SCORE: <span id="score">0</span></div>
+        <div>LEVEL: <span id="level">1</span></div>
+      </div>
+    </div>
+    <div class="control-wrapper">
+      <button class="btn" id="btnRun">
+        <i class="fa fa-gamepad" aria-hidden="true"></i> 开始
+      </button>
+      <button class="btn" id="btnPause">
+        <i class="fa fa-power-off" aria-hidden="true"></i> 停止
+      </button>
+      <button class="btn" id="btnReset">
+        <i class="fa fa-refresh" aria-hidden="true"></i> 重置
+      </button>
+    </div>
+  </body>
+</html>

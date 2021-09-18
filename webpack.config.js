@@ -63,6 +63,10 @@ module.exports = {
         use: ["style-loader", "css-loader", "postcss-loader", "less-loader"],
       },
       {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: "asset/resource",
+      },
+      {
         test: /\.vue$/,
         loader: "vue-loader",
       },

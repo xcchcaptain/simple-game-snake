@@ -8,7 +8,7 @@
 - [x] Less+Postcss
 - [x] Jest
 - [x] Eslint
-
+- [x] 对vue3的支持请使用分支[feat_add_vue3](http://192.168.10.26/canyou/webpack5-typescript-starter/-/tree/feat__add_vue3)
 ## 怎么运行？
 
 #### 安装依赖:
@@ -47,3 +47,9 @@ yarn build.prod
 ``` shell
 yarn test
 ```
+
+## 相关资源
+[typescript视频教程](https://www.bilibili.com/video/BV1Xy4y1v7S2?p=6)  
+[typescript官方指南](https://www.typescriptlang.org/docs/handbook/intro.html)  
+[typescript代码风格指南](https://zh-google-styleguide.readthedocs.io/en/latest/google-typescript-styleguide/consistency/)  
+[Vue3添加typescript](https://v3.vuejs.org/guide/typescript-support.html)

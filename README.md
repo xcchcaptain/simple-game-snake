@@ -8,7 +8,7 @@
 - [x] Less+Postcss
 - [x] Jest
 - [x] Eslint
-
+- [x] Vue3
 ## 怎么运行？
 
 #### 安装依赖:

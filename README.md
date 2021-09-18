@@ -49,7 +49,7 @@ yarn test
 ```
 
 ## 相关资源
-[typescript视频教程](https://www.bilibili.com/video/BV1Xy4y1v7S2?p=6)
-[typescript官方指南](https://www.typescriptlang.org/docs/handbook/intro.html)
-[typescript代码风格指南](https://zh-google-styleguide.readthedocs.io/en/latest/google-typescript-styleguide/consistency/)
+[typescript视频教程](https://www.bilibili.com/video/BV1Xy4y1v7S2?p=6)  
+[typescript官方指南](https://www.typescriptlang.org/docs/handbook/intro.html)  
+[typescript代码风格指南](https://zh-google-styleguide.readthedocs.io/en/latest/google-typescript-styleguide/consistency/)  
 [Vue3添加typescript](https://v3.vuejs.org/guide/typescript-support.html)

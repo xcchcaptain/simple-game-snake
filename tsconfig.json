@@ -1,23 +1,25 @@
 {
-	"compilerOptions": {
-		"outDir": "./dist/",
-		"sourceMap": true,
-		"noImplicitAny": true,
-		"module": "commonjs",
-		"target": "es5",
-		"declaration": true,
-		"allowSyntheticDefaultImports": true,
-		"esModuleInterop": true,
-		"lib": [
-			"DOM",
-			"ES2015"
-		]
-	},
-	"exclude": [
-		"../node_modules"
-	],
-	"include": [
-		"src/**/*",
-		"test"
-	]
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "module": "commonjs",
+    "target": "es5",
+    "declaration": true,
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "lib": [
+      "DOM",
+      "ES2015"
+    ]
+  },
+  "exclude": [
+    "../node_modules"
+  ],
+  "include": [
+    "src/**/*",
+    "test",
+    "shims-vue.d.ts"
+  ]
 }

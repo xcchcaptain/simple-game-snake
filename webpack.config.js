@@ -1,7 +1,8 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-
+const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ESLintPlugin = require("eslint-webpack-plugin");
+const { VueLoaderPlugin } = require("vue-loader");
 
 const path = require("path");
 const ROOT = path.resolve(__dirname, "src");
@@ -19,14 +20,19 @@ module.exports = {
       extensions: [".tsx", ".ts", ".js"],
       exclude: "node_modules",
     }),
+    new VueLoaderPlugin(),
+    /** toFix:Uncaught ReferenceError: process is not defined shared.esm-bundler.js:472 **/
+    new webpack.ProvidePlugin({
+      process: "process/browser",
+    }),
   ],
 
   entry: {
-    main: "./main.ts"
+    main: "./main.ts",
   },
 
   output: {
-    filename: "[name].[hash:8].js",
+    filename: "[name].[chunkhash:8].js",
     path: DESTINATION,
     clean: true,
   },
@@ -39,14 +45,26 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.ts$/,
+        test: /\.tsx?$/,
         exclude: [/node_modules/],
-        use: ["babel-loader", "ts-loader"],
+        use: [
+          "babel-loader",
+          {
+            loader: "ts-loader",
+            options: {
+              appendTsSuffixTo: [/\.vue$/],
+            },
+          },
+        ],
       },
       {
         test: /\.less$/,
         exclude: [/node_modules/],
         use: ["style-loader", "css-loader", "postcss-loader", "less-loader"],
+      },
+      {
+        test: /\.vue$/,
+        loader: "vue-loader",
       },
     ],
   },
